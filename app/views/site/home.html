@@ -1,0 +1,16 @@
+{% extends "site/master.html" %} {% block content %}
+
+<h2>Products</h2>
+
+<div x-data="products()" x-init="list()">
+  <template x-for="(product, key) in products" :key="key">
+    <div class="products-list">
+      <div x-text="product.name"></div>
+      <div x-text="`Price: ${formatPrice(product.price)}`"></div>
+      <button @click="add(product)">add</button>
+    </div>
+  </template>
+</div>
+
+
+{% endblock %}

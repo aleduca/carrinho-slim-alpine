@@ -1,0 +1,49 @@
+{% extends "site/master.html" %} {% block content %}
+
+<h2>Cart</h2>
+
+
+<div x-data="cart()">
+
+    <template x-if="products.length <= 0">
+        <span>Nenhum produto no carrinho</span>
+    </template>
+
+    <template x-for="(product, key) in products" :key="key">
+        <div class="cart-products">
+            <div x-text="product.name"></div>
+            <div>
+                <input type="text" x-model="product.qty" @keydown.debounce.750="change(product,key)">
+                <span x-text="formatPrice(product.subtotal)"></span>
+            </div>
+            <button @click="remove(key)">X</button>
+        </div>
+    </template>
+
+    <template x-if="products.length > 0">
+        <div>
+            <span x-text="formatPrice(total())"></span>
+            <button @click="clear">Clear</button>
+        </div>
+    </template>
+
+</div>
+
+<hr>
+
+<div x-data="checkout()">
+    <template x-if="loading">
+        <div>
+            <span id="loading">Aguarde, estamos fazendo o checkout.</span>
+            <br>
+            <br>
+        </div>
+    </template>
+    <button @click="checkout()">Checkout</button>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://js.stripe.com/v3/"></script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "Para rodar o projeto:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --watch",
+    "prod": "NODE_ENV=production webpack --progress --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.0.0-rc.6",
+    "webpack-cli": "^4.0.0-rc.1"
+  },
+  "dependencies": {
+    "alpinejs": "^2.7.3",
+    "axios": "^0.21.0"
+  }
+}

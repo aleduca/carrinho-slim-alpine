@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,400;1,600&display=swap");
+
+html,
+body {
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+#products-in-cart {
+  background-color: bisque;
+  padding: 10px;
+  border: solid 1px blueviolet;
+  position: absolute;
+}
+.cart-products {
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#loading {
+  background-color: aqua;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
